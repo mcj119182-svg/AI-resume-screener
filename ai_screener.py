@@ -2,7 +2,6 @@
 
 架构说明
 --------
-不再是一次性的「喂 prompt 拿 JSON」，而是一个最小的 Agent 循环：
 
     用户简历文本
         │
@@ -36,7 +35,6 @@ v2 本次重构要点
 5. query_candidate_history(name, normalized_hash) 升级版查重（判定规则见该函数 docstring）。
 6. 状态码统一：ok / skipped / invalid_resume / too_many_requests / db_error。
 
-对外接口保持不变（web_ui.py 无需改动）：
     ask_ai_to_screen / validate_ai_payload / save_to_database
 """
 
